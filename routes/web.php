@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\BooksController;
+use App\Http\Controllers\ReviewController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,4 +21,7 @@ Route::get('/', function () {
 })->name('homepage');
 
 Route::get('/about-us', [AboutController::class, 'aboutUs'])->name('about-us');
-Route::get('/', [BooksController::class, 'latestBooks'])->name('latest-books');
+// Route::get('/', [BooksController::class, 'latestBooks'])->name('latest-books');
+
+Route::get('book/{book_id}', [BooksController::class, 'show']);
+Route::post('/book/{book_id}/review', [ReviewController::class, 'store'])->name('book-review');

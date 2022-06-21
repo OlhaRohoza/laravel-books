@@ -37,24 +37,10 @@ nav {
 
 }
 
-.book__content {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.book__card {
-    display: flex;
-    flex-direction: column;
-    width: 20%;
-    padding: 5px;
-
-    p {
-        font-style: italic;
-    }
-}
-
 .book__card:nth-child(even) {
     background-color: lightgray;
     border-radius: 10px;
 }
+
+@import 'latest-books';
+@import 'book-detail';

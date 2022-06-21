@@ -16,6 +16,7 @@ class BookshopsSeeder extends Seeder
      */
     public function run()
     {
+        //clean the table bookshops before inserting 
         DB::table('bookshops')->truncate();
 
         $bookshops = [
